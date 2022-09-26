@@ -13,6 +13,7 @@ const verifyAuthTokenMiddleware = (req, res, next) => {
     if (error) {
       return res.status(401).json({ message: "Invaild Token" });
     }
+
     next();
   });
 };

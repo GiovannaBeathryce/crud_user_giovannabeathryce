@@ -19,6 +19,7 @@ const createUserService = async (email, name, password, isAdm) => {
   users.push({
     email,
     name,
+    password: hashedPassword,
     uuid: uuidv4(),
     isAdm,
     createdOn: datecreated,

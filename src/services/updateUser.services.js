@@ -1,7 +1,13 @@
 import users from "../database";
 
-const updateUserService = (uuid, user) => {
-  const userIndex = users.findIndex((user) => user.uuid === uuid);
+const updateUserService = (id, user) => {
+  const userIndex = users.findIndex((element) => element.id === id);
+
+  if (userIndex.isAdm === true) {
+    users = { ...users, ...user };
+
+    return users;
+  }
 
   if (userIndex === -1) {
     throw new Error("Users not found");

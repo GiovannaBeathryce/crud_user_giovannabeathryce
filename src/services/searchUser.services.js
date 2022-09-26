@@ -7,7 +7,7 @@ const searchUserService = (uuid) => {
     throw new Error("Users not found");
   }
 
-  return user;
+  return uuid;
 };
 
 export default searchUserService;

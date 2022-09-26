@@ -6,7 +6,7 @@ const deleteUserController = (req, res) => {
     const deletedUser = deleteUserService(id);
     return res.json(deletedUser);
   } catch (error) {
-    return res.status(400).json({
+    return res.status(401).json({
       message: error.message,
     });
   }
